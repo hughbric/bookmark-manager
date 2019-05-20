@@ -1,19 +1,26 @@
-Bookmarks Manager
------------------
+# Bookmarks Manager
+
 A website to maintain a collection of bookmarks.
 
-How to use this application
----------------------------
+## How to use
 
 
-User Stories
-------------
-As a user,  
-So that I can return to a bookmark,  
-I would like to see a list of bookmarks.  
+## User Stories
+
+```
+As a user,
+So that I can return to a bookmark,
+I would like to see a list of bookmarks.
+```
+
+## Domain Model
+
+Below is a domain model for the bookmarks model.
+
+![Bookmark Manager domain model](./public/images/bookmark_manager_13.png)
 
 
-### Specification to consider:
+### Specifications to consider:
 
 * Show a list of bookmarks
 * Add new bookmarks 
