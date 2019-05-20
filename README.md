@@ -9,7 +9,7 @@ A website to maintain a collection of bookmarks.
 
 ```
 As a user,
-So that I can return to a bookmark,
+So that I can quickly return to sites I visit frequently,
 I would like to see a list of bookmarks.
 ```
 
