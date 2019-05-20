@@ -17,7 +17,7 @@ I would like to see a list of bookmarks.
 
 Below is a domain model for the bookmarks model.
 
-![Bookmark Manager domain model](./public/images/bookmark_manager_13.png)
+![Bookmark Manager domain model](./images/bookmark_manager_1.png)
 
 
 ### Specifications to consider:
