@@ -1,7 +1,11 @@
-require './lib/app.rb'
+ENV['RACK_ENV'] = 'test'
 
+require File.join(File.dirname(__FILE__), '..', 'lib/app.rb')
+
+require 'capybara'
 require 'capybara/rspec'
 require 'coveralls'
+require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require 'sinatra'
@@ -14,7 +18,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 ])
 SimpleCov.start
 
-Capybara.app = Bookmark
+Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
