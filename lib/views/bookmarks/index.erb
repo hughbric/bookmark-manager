@@ -1,2 +1,6 @@
 <h1>Bookmark Manager</h1>
-<%= @bookmarks %>
+<ul>
+<% @bookmarks.each do |bookmark| %>
+<li><a href="<%= bookmark %>" target="_blank"><%= bookmark %></a></li>
+<% end %>
+</ul>
