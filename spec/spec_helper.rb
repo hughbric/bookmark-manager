@@ -4,13 +4,13 @@ require File.join(File.dirname(__FILE__), '..', 'lib/app.rb')
 
 require 'capybara'
 require 'capybara/rspec'
-require 'coveralls'
+# require 'coveralls'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require 'sinatra'
 
-Coveralls.wear!
+# Coveralls.wear!
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
