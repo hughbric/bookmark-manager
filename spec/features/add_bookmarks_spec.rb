@@ -3,7 +3,8 @@ feature 'add bookmark' do
     visit '/bookmarks'
     click_button 'Add Bookmark'
     fill_in 'add_url', with: 'https://en.wikipedia.org/wiki/Database'
+    fill_in 'add_title', with: 'Wiki Database'
     click_button 'Submit'
-    expect(page).to have_content('https://en.wikipedia.org/wiki/Database')
+    expect(page).to have_link('Wiki Database', href: 'https://en.wikipedia.org/wiki/Database')
   end
 end
