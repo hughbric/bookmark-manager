@@ -12,10 +12,17 @@ As a user,
 So that I can quickly return to sites I visit frequently,
 I would like to see a list of bookmarks.
 ```
+
 ```
 As a user,
 so that I can save a website,
 I would like to add the site's address and title to bookmark manager.
+```
+
+```
+As a user,
+so that I can remove bookmarks I no longer use,
+I want to delete a bookmark.
 ```
 
 ## Domain Model
