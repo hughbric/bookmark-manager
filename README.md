@@ -2,8 +2,33 @@
 
 A website to maintain a collection of bookmarks.
 
-## How to use
+## Approach
 
+The flow of development is:
+
+- Requirement
+- User Story
+- Feature Test
+- Unit Tests
+- Implementation
+- Refactor
+
+### Specifications to consider:
+
+* Show a list of bookmarks
+* Add new bookmarks 
+* Delete bookmarks
+* Update bookmarks
+* Comment on bookmarks
+* Tag bookmarks into categories
+* Filter bookmarks by tag
+* Users are restricted to manage only their own bookmarks
+
+## Domain Model
+
+Below is a domain model for the bookmarks model.
+
+![Bookmark Manager domain model](./images/bookmark_manager_1.png)
 
 ## User Stories
 
@@ -25,39 +50,41 @@ so that I can remove bookmarks I no longer use,
 I want to delete a bookmark.
 ```
 
-## Domain Model
+```
+As a user,
+so that I can change titles or URLs,
+I want to update a bookmark.
+```
 
-Below is a domain model for the bookmarks model.
+## How to use
 
-![Bookmark Manager domain model](./images/bookmark_manager_1.png)
-
-
-### Specifications to consider:
-
-* Show a list of bookmarks
-* Add new bookmarks 
-* Delete bookmarks
-* Update bookmarks
-* Comment on bookmarks
-* Tag bookmarks into categories
-* Filter bookmarks by tag
-* Users are restricted to manage only their own bookmarks
-
+Clone the repository and navigate to the root of the project directory.
 
 ### Database setup:
 
-Some psql commands to get setup:
+Install PSQL: `brew install psql`. Open PSQL and follow the commands below to get setup:
+
+Create the database:
 ```
 \l = list databases
 CREATE DATABASE "bookmark_manager";
 \c bookmark_manager = change to a database
 ```
+
+Create a table:
 ```
 CREATE TABLE bookmarks (
   id serial PRIMARY KEY,
   url VARCHAR (60)
   );
 ```
+
+Add a `title` column:
+```
+ALTER TABLE bookmarks ADD COLUMN title VARCHAR(60);
+```
+
+Some commands for viewing the database:
 ```
 \d = list of relations
 \dt = list tables
@@ -74,3 +101,10 @@ Create records in the database manually:
 INSERT INTO bookmarks (url)
 VALUES ('http://www.google.com'), ('http://www.makersacademy.com');
 ```
+
+### Running the application:  
+`rackup -p 9292`  
+
+Open your web browser at:  
+
+`http://localhost:9292/`
