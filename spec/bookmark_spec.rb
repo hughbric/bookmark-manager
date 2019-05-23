@@ -4,7 +4,7 @@ require 'database_helpers'
 describe Bookmark do
   describe '.all' do
     it 'returns all bookmarks' do
-      bookmark = Bookmark.add(url: "http://www.makersacademy.com", title: "Makers Academy")
+      bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
 
       bookmarks = Bookmark.all
 
@@ -18,7 +18,7 @@ describe Bookmark do
 
   describe '.add' do
     it 'adds a new bookmark' do 
-      bookmark = Bookmark.add(url: 'https://en.wikipedia.org/wiki/Database', title: 'Wiki Database')
+      bookmark = Bookmark.create(url: 'https://en.wikipedia.org/wiki/Database', title: 'Wiki Database')
       persisted_data = persisted_data(id: bookmark.id)
 
       expect(bookmark).to be_a Bookmark
@@ -30,7 +30,7 @@ describe Bookmark do
   
   describe '.delete' do
     it 'deletes the given bookmark' do
-      bookmark = Bookmark.add(url: 'https://www.makersacademy.com', title: 'Makers Academy')
+      bookmark = Bookmark.create(url: 'https://www.makersacademy.com', title: 'Makers Academy')
 
       Bookmark.delete(id: bookmark.id)
 
